@@ -32,13 +32,13 @@ then
 
   # Start download Understrap theme and child theme
   echo "Downloading Understrap Theme"
-  eval cd public_html/web/app/themes
-  git clone https://github.com/understrap/understrap.git understrap
+  eval cd ../
+  git clone https://github.com/understrap/understrap.git $project-understrap
   eval cd understrap
   npm install
   echo "Downloading Understrap Child Theme"
-  eval cd public_html/web/app/themes
-  git clone https://github.com/understrap/understrap-child.git understrap-child
+  eval cd ../
+  git clone https://github.com/understrap/understrap-child.git $project-understrap-child
   eval cd understrap-child
   npm install
   # End download theme
