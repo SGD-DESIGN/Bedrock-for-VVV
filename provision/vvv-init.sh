@@ -22,13 +22,28 @@ then
   # TODO: change eval to cd ${VVV_PATH_TO_SITE}/public_html or use mkdir command
   eval cd .. && composer create-project roots/bedrock public_html
 
-  # Start download theme
-  echo "Downloading Theme"
+  # Start download Sage theme
+  echo "Downloading Sage Theme"
   eval cd public_html/web/app/themes
-  git clone https://github.com/adamk22/base-camp.git $project-theme
+  git clone https://github.com/roots/sage.git $project-theme
   eval cd $project-theme
   composer install && npm install
   # End download theme
+
+  # Start download Understrap theme and child theme
+  echo "Downloading Understrap Theme"
+  eval cd public_html/web/app/themes
+  git clone https://github.com/understrap/understrap.git understrap
+  eval cd understrap
+  npm install
+  echo "Downloading Understrap Child Theme"
+  eval cd public_html/web/app/themes
+  git clone https://github.com/understrap/understrap-child.git understrap-child
+  eval cd understrap-child
+  npm install
+  # End download theme
+
+
 fi
 
 # The Vagrant site setup script will restart Nginx for us
