@@ -34,12 +34,12 @@ then
   echo "Downloading Understrap Theme"
   eval cd ../
   git clone https://github.com/understrap/understrap.git $project-understrap
-  eval cd understrap
+  eval cd $project-understrap
   npm install
   echo "Downloading Understrap Child Theme"
   eval cd ../
   git clone https://github.com/understrap/understrap-child.git $project-understrap-child
-  eval cd understrap-child
+  eval cd $project-understrap-child
   npm install
   # End download theme
 
