@@ -28,6 +28,7 @@ then
   git clone https://github.com/roots/sage.git $project-theme
   eval cd $project-theme
   composer install && npm install
+  eval cd ../
   # End download theme
 
   # Start download Understrap theme and child theme
