@@ -34,11 +34,14 @@ then
   # Start download Understrap theme and child theme
   echo "Downloading Understrap Theme"
   git clone https://github.com/understrap/understrap.git $project-understrap
+  eval cd $project-understrap
+  npm instal
   echo "Downloading Understrap Child Theme"
+  cd ../
   git clone https://github.com/understrap/understrap-child.git $project-understrap-child
+  eval cd $project-understrap-child
+  npm install
   # End download theme
-
-
 fi
 
 # The Vagrant site setup script will restart Nginx for us
